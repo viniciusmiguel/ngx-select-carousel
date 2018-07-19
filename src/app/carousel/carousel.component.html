@@ -1,0 +1,9 @@
+<div class="carousel-container" #carousel (pandown)="_up();" (panup)="_down();">
+  <div class="up" (click)="_up();" #up>&nbsp;</div>
+  <figure class="carousel-area" #area>
+      <img class="carousel-item"  *ngFor="let item of data" [src]="_textToImage(item.value)"/>
+  </figure>
+  <div class="magnifier"></div>
+  <div class="down" (click)="_down();" #down>&nbsp;</div>
+  <canvas class="canvas" #canvas></canvas>
+</div>
